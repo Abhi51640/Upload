@@ -49,6 +49,11 @@ Rails.application.configure do
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
 
+
+  # # Store uploaded files on the local file system in a temporary directory.
+  # config.active_storage.service = :test
+
+
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 

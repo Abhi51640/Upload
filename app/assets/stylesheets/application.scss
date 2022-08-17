@@ -1,3 +1,5 @@
+@import "bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
 $white: white;
 $black: black;
@@ -7,7 +9,7 @@ $black: black;
         background: $white;
 }
 body {
-        background: $black;
+        background-color:  #92a8d1;
         color: $white;
         font-family: 'Merriweather', sans-serif;
 }
@@ -39,6 +41,15 @@ a:visited {
         background-color: $white;
         display: inline-block;
 }
+
+.navbar-header{
+  width:100%;
+}
+
+.right-side-button{
+  float:right;
+}
+
 img,
 video,
 audio {

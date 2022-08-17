@@ -15,6 +15,9 @@ gem "sprockets-rails"
 gem "pg"
 
 gem "devise" 
+gem "image_processing", ">= 1.2"
+
+gem "pry"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -44,11 +47,12 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
-gem "sassc-rails"
+gem 'jsbundling-rails' 
+gem 'cssbundling-rails' 
+gem 'bootstrap', '~> 5.1.3'
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
