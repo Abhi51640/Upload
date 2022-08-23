@@ -1,10 +1,6 @@
 class Post < ApplicationRecord
  belongs_to :user, optional: true
-  has_one_attached :photo
-
-  def self.search(search)
-    where("title LIKE ? OR description LIKE ?","%#{search.downcase}%","%#{search.downcase}%")
-  end
+  has_one_attached :avatar
   
   def filter(filter)
     if filter

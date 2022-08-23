@@ -38,8 +38,12 @@ body {
     padding:20px;
     margin:8% auto 0;
     border-radius:15px;
-    border:2px solid steelblue;
+    border:2px solid #ddd;
     text-align: center;
+}
+.signup-form h2{
+    color:black;
+    margin-bottom:30px;
 }
 .panel-heading{
         text-align: center;
@@ -56,10 +60,6 @@ body {
 
 .panel-body{
     color: #fff;
-}
-.signup-form h2{
-    color:black;
-    margin-bottom:30px;
 }
 .col-md-4 {
         margin-top: 50px;
