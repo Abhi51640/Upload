@@ -12,6 +12,14 @@
 
   <body>
     <%= render partial: "devise/shared/navbar" %>
+    <div class="container">
+      <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
     <%= yield %>
+      <br />
+    <%= render partial: "devise/shared/footer" %>
   </body>
 </html>

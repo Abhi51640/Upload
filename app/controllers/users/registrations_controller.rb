@@ -9,10 +9,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
-  def index
-    @users = User.all
-  end
-
   # POST /resource
   def create
     @user = User.new(user_params)
@@ -79,6 +75,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private 
    def user_params
-    params.require(:user).permit(:email, :encrypted_password, :password, :first_name, :last_name, :date_of_birth, :gender, :city)
+    params.require(:user).permit(:email, :encrypted_password, :password, :first_name, :last_name, :date_of_birth, :gender)
   end
 end

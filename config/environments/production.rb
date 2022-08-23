@@ -79,7 +79,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
  
   # Store files on Amazon S3.
-  # config.active_storage.service = :amazon
+   config.active_storage.service = :amazon
 
  
   # Use a different logger for distributed setups.
