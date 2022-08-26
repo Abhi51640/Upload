@@ -48,6 +48,8 @@ Rails.application.configure do
 
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
+  
+  config.active_storage.service = :cloudinary_test
 
 
   # # Store uploaded files on the local file system in a temporary directory.

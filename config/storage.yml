@@ -6,6 +6,17 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+cloudinary:
+  service: Cloudinary
+  # cloud_name: "dtwkxtv3r"
+  # api_key: "633626712541652"
+  # api_secret: "kkSvRWCsz6BhhN5S-IytB_v7ooc"
+  # enhance_image_tag: true
+  # static_file_support: false
+  # secure: true
+  
+  # Any other settings you want, to be sent on all requests, can be included here as well.
+
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
