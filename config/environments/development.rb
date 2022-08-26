@@ -19,7 +19,9 @@ Rails.application.configure do
 
    config.sass.inline_source_maps = true
 
-
+  # Use Cloudinary.
+  config.active_storage.service = :cloudinary
+  
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?
@@ -37,7 +39,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
 
   # config.active_storage.service = :amazon
 

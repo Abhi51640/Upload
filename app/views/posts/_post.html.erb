@@ -1,7 +1,6 @@
 <%# if @post.persisted? %>
   <div class="card shadow-sm">
     <%= image_tag url_for(post.avatar) if post.avatar.attached? %>
-    
     <div class="card-body">
       <p class="card-text"><%= post.description %></p>
       <div class="d-flex justify-content-between align-items-center">
