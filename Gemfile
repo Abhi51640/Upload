@@ -30,13 +30,9 @@ gem 'dotenv'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-<<<<<<< HEAD
-=======
 # gem "refile", require: "refile/rails"
 
 gem 'cloudinary'
-
->>>>>>> 094084c... upload file in cloudinary
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
