@@ -1,16 +1,13 @@
 <nav class="navbar navbar-light" style="background-color: #fff;">  
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Uploader</a>    
-    <% if current_user %> 
-      <ul class="navbar-nav me-auto">   
-        <div class="nav-item">
-          <a class="nav-link active" href="<%= posts_path %>">  
-            <span class="icon"><i class="fas fa-user-friends"></i></span>
-            <span class="item">Posts</span>
-          </a>
-        </div>
-      </ul>
-      <%= button_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
-    <% end %>
+    <div class="logo">
+      <%= image_tag asset_url('images.png') %>
+    </div>
+    <a class="navbar-brand" href="#">DropBox</a> 
+    <div class="logout">
+      <% if current_user %> 
+        <%= button_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
+      <% end %>
+    </div>
   </div>
 </nav>

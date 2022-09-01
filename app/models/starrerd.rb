@@ -1,0 +1,2 @@
+class Starrerd < ApplicationRecord
+end

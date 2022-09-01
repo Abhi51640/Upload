@@ -4,7 +4,22 @@ Rails.application.routes.draw do
   devise_scope :user do
     root to: "devise/sessions#new"
   end
-  get 'welcome', to: 'welcome#index'
+  get 'post', to: 'post#index'
    
   resources :posts
+
+  resources :allfiles
+
+  resources :shareds
+
+  resources :photos
+
+  resources :recents
+
+  # recources :starred
+
+  resources :deletefiles
+
+  resources :filerequests
+
 end

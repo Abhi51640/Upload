@@ -1,0 +1,2 @@
+class Deletefile < ApplicationRecord
+end

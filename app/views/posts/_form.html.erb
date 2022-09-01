@@ -1,15 +1,20 @@
 <%= form_for @post  do |f| %>
-  </br>
-  <div class="form-group">
-     <%= f.text_area :description, class:'form-control', placeholder:'Tell us more about your project...', id: "exampleTextarea", rows: "3" %>
-  </div>
   <br>
   <div class="form-group clearfix">
-    <%= f.file_field :avatar, direct_upload: true %>
-    <%#= f.file_field :avatar, id:'uploadimage', class: 'form-control', style: 'width: 30%; float: right;' %>
+    <%= f.file_field :avatar, id:'uploadimage', class: 'form-control', style: 'width: 30%; float: right;', onchange: 'loadFile(event)' %>
   </div>
    <br>
-  <br>
+  <img id="output"/>
+  <script>
+    var loadFile = function(event) {
+      var reader = new FileReader();
+      reader.onload = function(){
+        var output = document.getElementById('output');
+        output.src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    };
+  </script>
   <div class="form-group clearfix">
     <%= f.submit id:'postbutton', class: 'btn btn-primary btn-lg float-end' %>
   </div>
