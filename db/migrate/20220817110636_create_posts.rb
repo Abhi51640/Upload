@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       
       t.integer :user_id
       t.string :description
+      t.boolean :is_public
+      t.boolean :is_private
       
       t.timestamps
     end

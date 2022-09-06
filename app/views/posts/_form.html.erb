@@ -15,6 +15,8 @@
       reader.readAsDataURL(event.target.files[0]);
     };
   </script>
+    <%= f.radio_button :is_public, 'Public' %> Public
+    <%= f.radio_button :is_private, 'Private' %> Private
   <div class="form-group clearfix">
     <%= f.submit id:'postbutton', class: 'btn btn-primary btn-lg float-end' %>
   </div>
