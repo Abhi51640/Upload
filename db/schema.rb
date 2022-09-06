@@ -10,8 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_123615) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_18_070434) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -42,41 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_123615) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "allfiles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "being_shared_folders", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "deletefiles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "filerequests", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "folders", force: :cascade do |t|
-    t.string "name"
-    t.integer "parent_id"
-    t.bigint "user_id_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["parent_id"], name: "index_folders_on_parent_id"
-    t.index ["user_id_id"], name: "index_folders_on_user_id_id"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "description"
@@ -86,43 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_123615) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "progressbars", force: :cascade do |t|
-    t.text "message"
-    t.integer "percent"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "recents", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "shared_folders", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "shared_email"
-    t.integer "shared_user_id"
-    t.integer "folder_id"
-    t.string "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["folder_id"], name: "index_shared_folders_on_folder_id"
-    t.index ["shared_user_id"], name: "index_shared_folders_on_shared_user_id"
-    t.index ["user_id"], name: "index_shared_folders_on_user_id"
-  end
-
-  create_table "shareds", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "starrerds", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "first_name"

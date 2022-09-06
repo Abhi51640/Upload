@@ -7,19 +7,4 @@ Rails.application.routes.draw do
   get 'post', to: 'post#index'
    
   resources :posts
-
-  resources :allfiles
-
-  resources :shareds
-
-  resources :photos
-
-  resources :recents
-
-  # recources :starred
-
-  resources :deletefiles
-
-  resources :filerequests
-
 end
