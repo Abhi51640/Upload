@@ -91,3 +91,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "mocha", group: :test

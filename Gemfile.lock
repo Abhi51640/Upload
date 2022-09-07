@@ -169,6 +169,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     minitest (5.16.2)
+    mocha (1.14.0)
     msgpack (1.5.4)
     net-imap (0.2.3)
       digest
@@ -314,6 +315,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  mocha
   pg
   pry
   puma (~> 5.0)
