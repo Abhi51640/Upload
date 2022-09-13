@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
+    @posts = Post.all
     @posts = current_user.posts.all.order(created_at: :desc)
+    @posts = Post.where("is_public").order! 'created_at DESC'
+    @pr_posts = current_user.posts.where("is_private").order! 'created_at DESC'
     @post = Post.new
   end
 
@@ -44,6 +47,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:user_id, :description, :avatar , :is_public, :is_private)
+   params.require(:post).permit(:user_id, :description, :avatar , :is_public, :is_private)
   end
 end

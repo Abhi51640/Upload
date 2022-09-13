@@ -67,7 +67,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
   config.action_mailer.default_url_options = { host: ENV['HOST'] }
-  config.hosts << "183c-2401-4900-1c19-6402-3dc6-2468-68f2-9dbc.in.ngrok.io"
+  config.hosts << "837f-2401-4900-1c19-6402-8a95-4e50-8df-6121.in.ngrok.io"
 
   # # Store files locally.
   # config.active_storage.service = :local

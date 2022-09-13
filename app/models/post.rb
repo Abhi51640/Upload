@@ -10,4 +10,7 @@ class Post < ApplicationRecord
       @posts = Posts.all
     end
   end
+  # scope :posts, -> { Current.user.post.order(created_at: :desc)}
+  # scope :products, -> { Current.site.import_histories.page.order(created_at: :desc).where(upload_type: 'products') }
+  # scope :vendors, -> { Current.site.import_histories.page.order(created_at: :desc).where(upload_type: 'vendors') }
 end

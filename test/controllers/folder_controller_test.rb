@@ -1,6 +1,6 @@
 require "test_helper"
 
-class AllfileTest < ActiveSupport::TestCase
+class FolderControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

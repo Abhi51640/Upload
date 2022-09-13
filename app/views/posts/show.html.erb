@@ -1,9 +1,7 @@
-<div class="card my-1">
-  <div class="card-body">
-    <div class="form-group">
-      
-      </div>
-      <br />
-    <%# end %>
-  </div>
-</div>
+<br>
+<%= form_for @post, html: {multipart: true}, url: post_path do |f| %>
+  <%= collection_select(:f, :user_id, User.all, :id, :first_name , placeholder:"Users", style:"background-color:black;") %> 
+  <br>
+  <%# binding.pry %>
+  <%= button_to 'Share', sharedfiles_path, class:"btn btn-sm btn-outline-primary"%>
+<% end %>

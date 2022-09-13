@@ -1,0 +1,2 @@
+class OrderCompletedMailer < ApplicationMailer
+end

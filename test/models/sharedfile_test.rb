@@ -1,6 +1,6 @@
 require "test_helper"
 
-class FilerequestTest < ActiveSupport::TestCase
+class SharedfileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

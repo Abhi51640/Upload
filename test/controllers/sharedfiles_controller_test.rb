@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CopyTest < ActiveSupport::TestCase
+class SharedfilesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

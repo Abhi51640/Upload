@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SharedTest < ActiveSupport::TestCase
+class SharedFolderControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # get 'post', to: 'post#index'
    
   resources :posts
+  resources :sharedfiles
 end
