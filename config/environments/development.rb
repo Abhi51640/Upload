@@ -67,7 +67,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
   config.action_mailer.default_url_options = { host: ENV['HOST'] }
-  config.hosts << "837f-2401-4900-1c19-6402-8a95-4e50-8df-6121.in.ngrok.io"
+  config.hosts << "b697-2401-4900-36a4-2be2-119-33ef-d6ee-6b21.in.ngrok.io"
 
   # # Store files locally.
   # config.active_storage.service = :local
@@ -92,7 +92,7 @@ Rails.application.configure do
   port:                 587,
   domain:               'example.com',
   user_name:            'abhishek@techwinners.in',
-  password:             'A9300086590',
+  password:           
   authentication:       'plain',
   enable_starttls_auto: true  }
 end

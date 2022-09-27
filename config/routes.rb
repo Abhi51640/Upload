@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # resources :folders
 
    get 'welcome', to: 'welcome#index'
+   post 'new_sharedfile', to: 'sharedfiles#new_shared'
 
   # get 'post', to: 'post#index'
    

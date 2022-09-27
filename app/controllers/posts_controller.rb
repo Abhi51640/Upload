@@ -4,13 +4,14 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @posts = current_user.posts.all.order(created_at: :desc)
-    @posts = Post.where("is_public").order! 'created_at DESC'
+    @r_posts = Post.where("is_public").order! 'created_at DESC'
     @pr_posts = current_user.posts.where("is_private").order! 'created_at DESC'
     @post = Post.new
   end
 
   def create
     @post = current_user.posts.new(post_params)
+    # binding.pry
     if @post.save
      redirect_to posts_path
     else
